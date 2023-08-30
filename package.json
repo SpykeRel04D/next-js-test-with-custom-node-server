@@ -8,12 +8,14 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"cypress:open": "cypress open"
+		"cypress:open": "cypress open",
+		"e2e": "concurrently -n Dev,Cypress -c blue,yellow  \"npm run dev:mocked\" \"npm run cypress:open\""
 	},
 	"dependencies": {
 		"@types/node": "20.5.7",
 		"@types/react": "18.2.21",
 		"@types/react-dom": "18.2.7",
+		"concurrently": "^8.2.1",
 		"eslint": "8.48.0",
 		"eslint-config-next": "13.4.19",
 		"next": "13.4.19",
