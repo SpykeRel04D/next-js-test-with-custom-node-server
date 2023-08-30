@@ -1,22 +1,27 @@
 {
-  "name": "next-with-custom-node-server",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "20.5.7",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
-    "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
-    "next": "13.4.19",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.2.2"
-  }
+	"name": "next-with-custom-node-server",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"dev:mocked": "NEXT_PUBLIC_API_BASE_URL=http://localhost:4000/ next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"cypress:open": "cypress open"
+	},
+	"dependencies": {
+		"@types/node": "20.5.7",
+		"@types/react": "18.2.21",
+		"@types/react-dom": "18.2.7",
+		"eslint": "8.48.0",
+		"eslint-config-next": "13.4.19",
+		"next": "13.4.19",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"typescript": "5.2.2"
+	},
+	"devDependencies": {
+		"cypress": "^13.0.0"
+	}
 }
